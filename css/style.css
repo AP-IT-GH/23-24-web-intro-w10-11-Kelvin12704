@@ -17,3 +17,9 @@ a, a:hover {
 .koffiebruin{
   color: #ca8446;
 }
+
+.img-small {
+  padding: 0px 20px 20px 0px;
+  width: 100px;
+  height: 100px;
+}
