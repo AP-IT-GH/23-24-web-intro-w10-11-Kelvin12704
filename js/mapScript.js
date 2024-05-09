@@ -13,16 +13,16 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 
 
 
+var greenIcon = L.icon({
+    iconUrl: './assets/coffee-icon.png',
+    shadowUrl: './assets/coffee-icon-shadow.png',
 
-
-
-
-
-
-// bepaal de rechthoek rondom het gebouw van AP
-let bounds = [[51.23041, 4.4155], [51.22991, 4.41675]];
-// kleur de rechthoek in met de rode AP-kleur
-L.rectangle(bounds, {color: "#e60005", weight: 1}).addTo(map);
+    iconSize:     [50, 50], // size of the icon
+    shadowSize:   [50, 50], // size of the shadow
+    iconAnchor:   [0, 50], // point of the icon which will correspond to marker's location
+    shadowAnchor: [0, 50],  // the same for the shadow
+    popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
+});
 // plaats een marker met als tekst "AP-Hogeschool" en eronder "Ellermanstraat 33"
-let apMarker = L.marker([51.23009, 4.41616]).addTo(map);
-apMarker.bindPopup("<b>AP-Hogeschool</b><br>Ellermanstraat 33").openPopup();
+
+L.marker([51.23009, 4.41616], {icon: greenIcon}).addTo(map);
